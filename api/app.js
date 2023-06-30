@@ -54,6 +54,20 @@ app.post("/newProduct", (req, res, next) => {
   // res.send("You added the product! Check the existing products page.");
 });
 
+// These are not covered in the tutorials yet. They are for other related issues I've encountered since doing the original tutorial series.
+
+app.get("/", (req, res) => {
+  res.json("Hello World Yo!");
+});
+
+app.get("/sendhello", (req, res, next) => {
+  return res.send("Hello World yo!");
+});
+
+app.get("/sendhellojson", (req, res, next) => {
+  return res.json("dawg Hello World yo json bro!");
+});
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
 });

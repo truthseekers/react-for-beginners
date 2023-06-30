@@ -14,10 +14,18 @@ import FormSubmissionEx2 from "./formSubmission2/FormSubmissionEx2";
 import ReactQueryStuff from "./reactQueryStuff/ReactQueryStuff";
 import RoutingStuff from "./ReactRouterStuff/RoutingStuff";
 import TestCreateElement from "./createElementStuff/TestCreateElement";
+import FetchOne from "./FetchOne";
+import FetchTwo from "./FetchTwo";
+import FetchThree from "./FetchThree";
+import FetchFour from "./FetchFour";
 
 function App() {
   return (
     <div className="App">
+      <h2>
+        Visit App.js and uncomment the components to see what each one does.
+        Every "lesson" is isolated into its own section
+      </h2>
       {/* <StateExample /> */}
       {/* <PropsExample /> */}
       {/* <LiftStateEx /> */}
@@ -27,12 +35,16 @@ function App() {
       {/* <UseEffectExample /> */}
       {/* <CleanupHome /> */}
       {/* formSubmissionEx and Ex2 is "hooks" */}
-      <CustomHookBasics />
+      {/* <CustomHookBasics /> */}
       {/* <FormSubmissionEx /> */}
       {/* <FormSubmissionEx2 /> */}
       {/* <ReactQueryStuff /> */}
       {/* <RoutingStuff /> */}
       {/* <TestCreateElement /> */}
+      {/* <FetchOne /> */}
+      {/* <FetchTwo /> */}
+      {/* <FetchThree /> */}
+      <FetchFour />
     </div>
   );
 }
