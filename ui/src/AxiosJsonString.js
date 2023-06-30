@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-function FetchThree() {
+function AxiosJsonString() {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -9,7 +9,7 @@ function FetchThree() {
   const fetchData = async () => {
     try {
       const asyncResponse = await axios.get(
-        "http://localhost:3001/" + "sendhello"
+        "http://localhost:3001/axiosjsonstring"
       );
       console.log("asyncResponse: ", asyncResponse);
       // setData(asyncResponse.data);
@@ -29,9 +29,9 @@ function FetchThree() {
 
   return (
     <>
-      <h1>Fetch Three</h1>
+      <h1>Axios Json String</h1>
     </>
   );
 }
 
-export default FetchThree;
+export default AxiosJsonString;

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-function FetchTwo() {
+function AxiosSendArray() {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -9,7 +9,7 @@ function FetchTwo() {
   const fetchData = async () => {
     try {
       const asyncResponse = await axios.get(
-        "http://localhost:3001/" + "products"
+        "http://localhost:3001/axiossendarray"
       );
       console.log("asyncResponse: ", asyncResponse);
       // setData(asyncResponse.data);
@@ -34,4 +34,4 @@ function FetchTwo() {
   );
 }
 
-export default FetchTwo;
+export default AxiosSendArray;

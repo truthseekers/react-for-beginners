@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
-// import axios from "axios";
 
-function FetchFour() {
+function FetchJsonStringAwait() {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -34,7 +33,6 @@ function FetchFour() {
   //     });
   // }, []);
 
-  // this doesn't work either. Stupid docs and garbage tutorials
   // useEffect(() => {
   //   fetch(`http://localhost:3001/sendhellojson`)
   //     .then((response) => {
@@ -48,27 +46,27 @@ function FetchFour() {
   // }, []);
 
   async function logJSONData() {
-    const response = await fetch("http://localhost:3001/sendhellojson");
+    const response = await fetch("http://localhost:3001/fetchjsonstringawait");
     const jsonData = await response.json();
-    console.log("holy cow jsonData: ", jsonData);
+    console.log("jsonData: ", jsonData);
   }
 
   logJSONData();
 
-  async function logResSend() {
-    const response = await fetch("http://localhost:3001/sendhello");
-    console.log("response: ", response.body);
-    // const jsonData = await response();
-    // console.log("log resSend: ", jsonData);
-  }
+  // async function logResSend() {
+  //   const response = await fetch("http://localhost:3001/sendhello");
+  //   console.log("response: ", response.body);
+  //   // const jsonData = await response();
+  //   // console.log("log resSend: ", jsonData);
+  // }
 
-  logResSend();
+  // logResSend();
 
   return (
     <>
-      <h1>Fetch Four (no axios)</h1>
+      <h1>Fetch Json String with await</h1>
     </>
   );
 }
 
-export default FetchFour;
+export default FetchJsonStringAwait;

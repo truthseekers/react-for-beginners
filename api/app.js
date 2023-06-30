@@ -60,12 +60,47 @@ app.get("/", (req, res) => {
   res.json("Hello World Yo!");
 });
 
-app.get("/sendhello", (req, res, next) => {
+app.get("/fetchjsonstring", (req, res) => {
+  return res.json("Hello World yo!... ?");
+});
+
+app.get("/fetchjsonstringawait", (req, res, next) => {
+  return res.json("dawg Hello World yo json bro await on fe!");
+});
+
+app.get("/fetchjsonarray", (req, res) => {
+  return res.json(products);
+});
+
+app.get("/axiosjsonstring", (req, res, next) => {
+  return res.json("axios json string returned res.json");
+});
+
+app.get("/axiosjsonarray", (req, res, next) => {
+  return res.json(products);
+});
+
+app.get("/axiossendarray", (req, res, next) => {
+  return res.send(products);
+});
+
+app.get("/axiossendstring", (req, res, next) => {
   return res.send("Hello World yo!");
 });
 
-app.get("/sendhellojson", (req, res, next) => {
-  return res.json("dawg Hello World yo json bro!");
+app.get("/fetchsendobj", (req, res, next) => {
+  // return res.send("fetchsendstring!");
+  return res.send({ hello: "world" });
+});
+
+app.get("/fetchsendarray", (req, res, next) => {
+  // return res.send("fetchsendstring!");
+  return res.send(products);
+});
+
+app.get("/fetchsendstring", (req, res, next) => {
+  // return res.send("fetchsendstring!");
+  return res.send("Dont know how to send a string via res.send");
 });
 
 app.listen(port, () => {
